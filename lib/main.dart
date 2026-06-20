@@ -44,7 +44,7 @@ class Cuerpo extends StatelessWidget {
               ),
             ),
              ListTile(
-              title: Text("Pagina 4"),
+              title: Text("Pagina 3"),
               onTap: () =>Navigator.push(
                 context,
                 MaterialPageRoute(builder: (context) => Pagina4()),
