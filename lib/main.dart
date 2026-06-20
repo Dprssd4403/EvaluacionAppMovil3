@@ -1,5 +1,6 @@
 import 'package:evaluacion1/Screens/Pregunta2.dart';
 import 'package:evaluacion1/Screens/Pregunta3.dart';
+import 'package:evaluacion1/Screens/Pregunta4.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -42,6 +43,13 @@ class Cuerpo extends StatelessWidget {
                 MaterialPageRoute(builder: (context) => Pregunta3()),
               ),
             ),
+             ListTile(
+              title: Text("Pagina 4"),
+              onTap: () =>Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => Pagina4()),
+              ),
+            ),
           ],
         ),
       ),
@@ -57,7 +65,7 @@ class Cuerpo extends StatelessWidget {
 }
 
 Widget img1() {
-  return (Image.asset("assets/images/radagon.jpg"));
+  return (Image.asset("assets/image/radagon.jpg"));
 }
 
 Widget btnInformacion(BuildContext context) {

@@ -27,9 +27,8 @@ class _Pagina4State extends State<Pagina4> {
   }
 }
 
-Future<List<dynamic>> leer(String url) async {
+Future<Map<String, dynamic>> leer(String url) async {
   final respuesta = await http.get(Uri.parse(url));
-
   return json.decode(respuesta.body);
 }
 
@@ -39,7 +38,7 @@ Widget listaDatos() {
     future: leer(url),
     builder: (context, snapshot) {
       if (snapshot.hasData) {
-        final data = snapshot.data!;
+        final List<dynamic> data = snapshot.data!['musica'];
         return ListView.builder(
           itemCount: data.length,
           itemBuilder: (context, index) {
