@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:evaluacion1/navigations/NavegadorDraver.dart';
 import 'package:flutter/material.dart';
 
 class Pregunta2 extends StatelessWidget {
@@ -14,7 +15,9 @@ class Pregunta2 extends StatelessWidget {
       inputVelocidad(),
       btnCalcular(context)
       ],
-     ));
+     ),
+     drawer: MiDrawer(),
+     );
   }
 }
 
@@ -53,8 +56,8 @@ Widget btnCalcular(BuildContext context) {
 }
 
 void resultado(BuildContext context) {
-  double masa = 0;
-  double velocidad = 0;
+  double masa = double.parse(_masa.text);
+  double velocidad = double.parse(_velocidad.text);
 
   if (velocidad == 0) {
     showDialog(

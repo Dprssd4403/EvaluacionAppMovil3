@@ -1,3 +1,4 @@
+import 'package:evaluacion1/navigations/NavegadorDraver.dart';
 import 'package:flutter/material.dart';
 
 class Pregunta3 extends StatelessWidget {
@@ -5,7 +6,17 @@ class Pregunta3 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: Column());
+    return Scaffold(
+      appBar: AppBar(title : Text("Pregunta 3")),
+      body: Column(
+      children: [
+        inputDistancia(),
+        inputPrecio(),
+        inputEficiencia(),
+        btnCalcularCosto(context)
+      ],
+    ), 
+    drawer: MiDrawer());
   }
 }
 
